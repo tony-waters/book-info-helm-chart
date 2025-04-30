@@ -23,6 +23,6 @@ jobs:
 # --username=${{ secrets.GIT_USERNAME }} --password=${{ secrets.GIT_PASSWORD }}
       - name: searching for own charts
         run: helm search repo tw
-#      - name: push to registry
-#        run: helm push nginx tw --debug
+      - name: push to registry
+        run: helm push bookinfo tw --debug
 
