@@ -21,8 +21,8 @@ jobs:
       - name: access own helm repository
         run: helm repo add  tw https://tony-waters.github.io/helm-charts/
 # --username=${{ secrets.GIT_USERNAME }} --password=${{ secrets.GIT_PASSWORD }}
-#      - name: searching for own charts
-#        run: helm search repo tw
+      - name: searching for own charts
+        run: helm search repo tw
 #      - name: push to registry
 #        run: helm push nginx tw --debug
 
