@@ -8,7 +8,7 @@ jobs:
       - name: checkout code
         uses: actions/checkout@v2
       - run: ls -la
-      - name: install using helm
+      - name: package
         run: helm package .
       - name: which helm version
         run: helm version
