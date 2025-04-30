@@ -7,9 +7,9 @@ jobs:
     steps:
       - name: checkout code
         uses: actions/checkout@v2
-      - run: ls -la
       - name: package
         run: helm package .
+      - run: ls -la
       - name: which helm version
         run: helm version
 #      - run: ls -la
@@ -18,8 +18,9 @@ jobs:
 #      - name: searching for charts
 #        run: helm search repo talend-public
 
-#      - name: access own helm repository
-#        run: helm repo add --username=${{ secrets.GIT_USERNAME }} --password=${{ secrets.GIT_PASSWORD }} tw https://tony-waters.github.io/helm-charts/
+      - name: access own helm repository
+        run: helm repo add  tw https://tony-waters.github.io/helm-charts/
+# --username=${{ secrets.GIT_USERNAME }} --password=${{ secrets.GIT_PASSWORD }}
 #      - name: searching for own charts
 #        run: helm search repo tw
 #      - name: push to registry
